@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>算法测试</title>
+</head>
+
+<body>
+</body>
+<script>
+  {
+    let arr = [4, 77, 3, 34, 42, 61, 52, 45, 12, 43, 56];
+    var i = 0;
+
+    function swapQuickStort(array,index1,index2) {
+      var temp = array[index1];
+      array[index1] = array[index2];
+      array[index2] = temp;
+      console.log('swap');
+    }
+
+    function partition(array, left, right) {
+      console.log('partition');
+      var pivot = array[Math.floor((right + left) / 2)],
+          i = left,
+          j = right;
+      while (i<=j) {
+        while (array[i] < pivot) {
+          i++;
+        }
+        while (array[j] > pivot) {
+          j--;
+        }
+        if (i <= j) {
+          swapQuickStort(array,i,j);
+          i++;
+          j--;
+        }
+      }
+      return i;
+    }
+
+    function quick(array, left, right) {
+      var index;
+      console.log(arr);
+      if (array.length > 1) {
+        index = partition(array, left, right);
+        console.log(left,right);
+        if (left < index - 1) {
+          quick(array, left, index - 1);
+        }
+        if (index < right) {
+          quick(array, index, right);
+        }
+      }
+    }
+
+    quick(arr, 0, arr.length - 1)
+    console.log('执行完毕');
+    
+  }
+</script>
+
+</html>

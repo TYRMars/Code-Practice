@@ -58,8 +58,28 @@
 
     quick(arr, 0, arr.length - 1)
     console.log('执行完毕');
-    
+    console.log('----------------- 二分法');
+
+    function twoSearch(array,key) {
+      console.log(array);
+      var left = 0, right = array.length - 1;
+      while (left<right) {
+        console.log(left,right);
+        var mid = Math.floor((left+right) / 2);
+        if (array[mid]===key) {
+          return console.log(mid);
+        }else if (key>array[mid]) {
+          left = mid+1;
+        }else if (key<array[mid]) {
+          right = mid;
+        }
+      }
+      return 0
+    }
+    twoSearch(arr,4);
   }
+
+
 </script>
 
 </html>

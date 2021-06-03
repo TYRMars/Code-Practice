@@ -1,0 +1,22 @@
+{
+  "name": "code-practice",
+  "version": "1.0.0",
+  "description": "Code-Practice 自己平时练习的一些代码",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TYRMars/Code-Practice.git"
+  },
+  "author": "zhangjianan1996@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TYRMars/Code-Practice/issues"
+  },
+  "homepage": "https://github.com/TYRMars/Code-Practice#readme",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
